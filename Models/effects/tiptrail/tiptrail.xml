@@ -11,42 +11,10 @@
     <pass>true</pass>
 
     <condition>
-      <and>
         <greater-than>
-          <property>/environment/relative-humidity</property>
-          <value>98</value>
+          <property>orientation/alpha-deg</property>
+          <value>7</value>
         </greater-than>
-        <greater-than>
-          <property>/environment/temperature-degc</property>
-          <value>0</value>
-        </greater-than>
-        <greater-than>
-          <property>velocities/airspeed-kt</property>
-          <value>180</value>
-        </greater-than>
-        <or>
-          <or>
-            <less-than>
-              <property>surface-positions/left-aileron-pos-norm</property>
-              <value>-0.01</value>
-            </less-than>
-            <greater-than>
-              <property>surface-positions/left-aileron-pos-norm</property>
-              <value>0.01</value>
-            </greater-than>
-          </or>
-          <or>
-            <less-than>
-              <property>surface-positions/left-elevator-pos-norm</property>
-              <value>-0.01</value>
-            </less-than>
-            <greater-than>
-              <property>surface-positions/left-elevator-pos-norm</property>
-              <value>0.01</value>
-            </greater-than>
-          </or>
-        </or>
-      </and>
     </condition>
 
     <attach>world</attach>

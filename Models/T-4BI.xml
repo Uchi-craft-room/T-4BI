@@ -4,6 +4,30 @@
 
   <path>T-4BI.ac</path>
 
+    <!-- Uncomment this section for FG 3.5 ALS Glass effects -->
+    <effect>
+        <name>T4glass</name>
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>canopy.glass.inn-RR</object-name>
+    </effect>
+    <effect>
+        <name>T4windshield</name>
+        <inherits-from>Effects/glass</inherits-from>
+        <object-name>canopy.glass.inn-FR</object-name>
+    </effect>
+
+    <!-- Canopy -->
+    <animation>
+        <type>select</type>
+        <condition>
+            <not>
+                <property>/sim/rendering/rembrandt/enabled</property>
+            </not>
+        </condition>
+        <object-name>canopy.glass.inn-FR</object-name>
+        <object-name>canopy.glass.inn-RR</object-name>
+    </animation>
+
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/T-4BI/Models/Liveries", 10);
@@ -66,9 +90,6 @@
     <object-name>vstabFin1</object-name>
     <object-name>vstabFin2</object-name>
     <object-name>antenna2</object-name>
-
-
-    <!--<property-base>sim/model/livery</property-base>-->
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
 
@@ -84,6 +105,7 @@
       <blue-prop>emission/blue</blue-prop>
     </emission>
   </animation>
+
 
 <!-- Pushback -->
 <model>
@@ -127,10 +149,16 @@
     <type>select</type>
     <object-name>shadowOSG</object-name>
     <condition>
+      <and>
       <equals>
         <property>/sim/rendering/rembrandt/enabled</property>
         <value>false</value>
       </equals>
+      <equals>
+        <property>/sim/replay/replay-state</property>
+        <value>0</value>
+      </equals>
+      </and>
     </condition>
   </animation>
 
@@ -1054,6 +1082,7 @@
     <object-name>canopy_frame_out</object-name>
     <object-name>mirror</object-name>
     <object-name>mirror.glass</object-name>
+    <object-name>canopy.glass.inn-RR</object-name>
   </animation>
 
   <animation>
@@ -1330,6 +1359,34 @@
           <property>controls/electric/external-power</property>
     </condition>
   </animation>
+
+<!-- effect -->
+   <model>
+    <path>Aircraft/T-4ADTW/Models/effects/splash/right-splash.xml</path>
+    <offsets>
+      <x-m> 0.854 </x-m>
+      <y-m>  1.523 </y-m>
+      <z-m> -1.134 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/T-4ADTW/Models/effects/splash/left-splash.xml</path>
+    <offsets>
+      <x-m> 0.854 </x-m>
+      <y-m> -1.523 </y-m>
+      <z-m> -1.134 </z-m>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/T-4ADTW/Models/effects/splash/front-splash.xml</path>
+    <offsets>
+      <x-m>  -4.220 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.352 </z-m>
+    </offsets>
+  </model>
 
 </PropertyList>
 
