@@ -41,7 +41,7 @@
   <!-- Pilot seat-->
   <model>
     <name>Pilot seat</name>
-    <path>Aircraft/T-4BI/Models/interior/seat/seat.ac</path>
+    <path>Aircraft/T-4BI/Models/Interior/seat/seat.ac</path>
     <offsets>
       <x-m>  -0.100 </x-m>
       <y-m>  0.000 </y-m>
@@ -52,7 +52,7 @@
   <!--TourPilot seat-->
   <model>
     <name>TourPilot seat</name>
-    <path>Aircraft/T-4BI/Models/interior/seat/seat-Rr.ac</path>
+    <path>Aircraft/T-4BI/Models/Interior/seat/seat-Rr.ac</path>
     <offsets>
       <x-m>  1.500 </x-m>
       <y-m>  0.000 </y-m>
