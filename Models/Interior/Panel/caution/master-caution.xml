@@ -12,16 +12,33 @@
   <animation>
     <type>select</type>
     <object-name>caution</object-name>
-  <condition>
-   <and>
-     <not>
-     <property>gear/gear[0]/wow</property>
-     </not>
-     <less-than>
+     <condition>
+      <or>
+      <and>
+	<property>/sim/model/lights/sbc1/state</property>
+        <greater-than>
+           <property>systems/electrical/volts</property>
+           <value>16</value>
+        </greater-than>
+        <less-than>
 	   <property>systems/electrical/volts</property>
-	   <value>16</value>
-     </less-than>
-    </and>
+	   <value>24</value>
+        </less-than>
+     </and>
+
+     <and>
+     <property>/sim/model/lights/sbc1/state</property>
+     <greater-than>
+       <property>systems/electrical/volts</property>
+       <value>16</value>
+     </greater-than>
+       <less-than>
+         <property>consumables/fuel/total-fuel-lbs</property>
+         <value>50</value>
+       </less-than>
+     </and>
+
+     </or>
    </condition>
   </animation>
 
@@ -29,7 +46,6 @@
     <type>material</type>
     <object-name>caution</object-name>
     <emission>
-      <!-- <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop> -->
       <red>   1 </red>
       <green> 1 </green>
       <blue>  1 </blue>

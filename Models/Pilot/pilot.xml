@@ -56,8 +56,10 @@
   <animation>
     <type>rotate</type>
     <object-name>AnimeTete</object-name>
-    <property>controls/flight/rudder</property>
-    <factor>-25</factor>
+    <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+    <factor>50</factor>
+    <min-deg>-50</min-deg>
+    <max-deg>50</max-deg>
     <center>
       <x-m> 0.150 </x-m>
       <y-m> 0.005 </y-m>

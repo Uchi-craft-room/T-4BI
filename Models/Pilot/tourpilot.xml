@@ -53,8 +53,10 @@
   <animation>
     <type>rotate</type>
     <object-name>AnimeTete</object-name>
-    <property>controls/flight/rudder</property>
-    <factor>-25</factor>
+    <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+    <factor>50</factor>
+    <min-deg>-50</min-deg>
+    <max-deg>50</max-deg>
     <center>
       <x-m> 0.150 </x-m>
       <y-m> 0.005 </y-m>
@@ -63,7 +65,7 @@
     <axis>
       <x> 0.000 </x>
       <y> 0.000 </y>
-      <z> 1.000 </z>
+      <z> -1.000 </z>
     </axis>
   </animation>
 

@@ -12,14 +12,20 @@
   <animation>
     <type>select</type>
     <object-name>caution</object-name>
-  <condition>
-   <and>
-     <greater-than>
-	   <property>systems/electrical/volts</property>
-	   <value>24</value>
-     </greater-than>
-     <property>engines/engine[1]/out-of-fuel</property>
-    </and>
+    <condition>
+       <and>
+        <greater-than>
+	  <property>systems/electrical/volts</property>
+	  <value>16</value>
+        </greater-than>
+
+        <equals>
+          <property>engines/engine[1]/out-of-fuel</property>
+          <value>true</value>
+        </equals>
+
+        <property>/sim/model/lights/sbc1/state</property>
+      </and>
    </condition>
   </animation>
 
