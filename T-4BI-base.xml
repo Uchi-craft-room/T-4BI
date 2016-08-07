@@ -5,7 +5,7 @@
   <sim include="Nasal/views.xml">
 
     <aircraft-version>1.0</aircraft-version>
-    <status>Ver.1.2</status>
+    <status>Ver.1.4</status>
 
     <fuel-fraction>1.0</fuel-fraction>
 

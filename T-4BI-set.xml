@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<PropertyList include="T-4BI-yasim-cnf.xml">
+<PropertyList include="T-4BI-base.xml">
 
   <sim>
     <description>T-4 BI (YASim)</description>
-    <status>Ver.1.3</status>
+    <status>v1.4</status>
     <author>Hitoshi Uchida(3D/FDM)</author>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">T-4BI-yasim</aero>
   </sim>
 
 </PropertyList>
