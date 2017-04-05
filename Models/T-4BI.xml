@@ -158,6 +158,7 @@
         <property>/sim/replay/replay-state</property>
         <value>0</value>
       </equals>
+      <property>gear/gear/ground-is-solid</property>
       </and>
     </condition>
   </animation>

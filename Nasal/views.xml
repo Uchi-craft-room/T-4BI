@@ -13,11 +13,24 @@
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
        <x-offset-m archive="y">  0.000 </x-offset-m>	<!-- Right -->
        <y-offset-m archive="y">  0.95 </y-offset-m>	<!-- Up    -->
-       <z-offset-m archive="y"> -1.330 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg> 0 </pitch-offset-deg>
+       <z-offset-m archive="y"> -1.370 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg> -15 </pitch-offset-deg>
       <default-field-of-view-deg> 76 </default-field-of-view-deg>
-      <dynamic-view type="bool">false</dynamic-view>
-    </config>
+      <dynamic-view type="bool">true</dynamic-view>
+        <limits>
+          <enabled type="bool">true</enabled>
+          <left>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.20</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </left>
+          <right>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.20</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </right>
+        </limits>
+      </config>
   </view>
 
   <view n="101">

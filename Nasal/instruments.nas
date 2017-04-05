@@ -92,5 +92,14 @@ setlistener("/engines/engine[0]/n1",func{
 setlistener("/controls/anti-ice/window-heat",func{
              interpolate("/environment/windowheat-level",1-getprop("/controls/anti-ice/window-heat")*0.9,10)});
 
+#########################  FUEL TANK SETTING ############################################
+
+props.globals.getNode("consumables/fuel/tank[3]/selected",1).setBoolValue(0);
+
+#
+setlistener("controls/flight/spoilers",func(em){
+       var epty = em.getValue();
+       setprop("consumables/fuel/tank[3]/selected",epty);
+});
 
 

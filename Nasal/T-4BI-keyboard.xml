@@ -12,12 +12,31 @@
     </binding>
   </key>
 
- <key n="101">
-  <name>e</name>
-  <desc>on/off Smoke</desc>
+ <key n="106">
+  <name>j</name>
+  <desc>Decrease spoilers</desc>
   <binding>
-   <command>property-toggle</command>
-   <property>/controls/gear/tailhook</property>
+   <command>nasal</command>
+   <script>controls.stepSpoilers(-1)</script>
+  </binding>
+  <binding>
+    <command>property-assign</command>
+    <property>consumables/fuel/tank[3]/selected</property>
+    <value>0</value>
+  </binding>
+ </key>
+
+ <key n="107">
+  <name>k</name>
+  <desc>Increase spoilers</desc>
+  <binding>
+   <command>nasal</command>
+   <script>controls.stepSpoilers(1)</script>
+  </binding>
+  <binding>
+    <command>property-assign</command>
+    <property>consumables/fuel/tank[3]/selected</property>
+    <value>1</value>
   </binding>
  </key>
 

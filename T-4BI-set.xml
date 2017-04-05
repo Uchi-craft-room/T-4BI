@@ -4,7 +4,7 @@
 
   <sim>
     <description>T-4 BI (YASim)</description>
-    <status>v1.4</status>
+    <status>v1.5</status>
     <author>Hitoshi Uchida(3D/FDM)</author>
     <flight-model archive="y">yasim</flight-model>
     <aero archive="y">T-4BI-yasim</aero>

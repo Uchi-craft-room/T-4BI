@@ -23,6 +23,9 @@
   <animation>
     <type>select</type>
     <object-name>tete</object-name>
+    <object-name>bras</object-name>
+    <object-name>avantbras</object-name>
+    <object-name>main</object-name>
     <condition>
       <not>
       <equals>
