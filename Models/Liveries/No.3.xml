@@ -4,11 +4,11 @@
   <sim>
     <model>
 	<livery>
-        <name type="string">default</name>
-        <texture>Liveries/default.png</texture>
+        <name type="string">No.3</name>
+        <texture>Liveries/No.3.png</texture>
 	</livery>
 	<livery-logo>
-	<texture>Liveries/default.png</texture>
+	<texture>Liveries/No.3.png</texture>
 	</livery-logo>
     </model>
   </sim>

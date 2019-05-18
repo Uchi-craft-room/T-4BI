@@ -12,11 +12,11 @@
    <condition>
      <and>
        <greater-than>
-       <property>/controls/flight/spoilers</property>
+       <property>controls/flight/spoilers</property>
        <value>0</value>
        </greater-than>
        <not>
-       <property>/consumables/fuel/tank[3]/empty</property>
+       <property>consumables/fuel/tank[3]/empty</property>
        </not>
      </and>
    </condition>
