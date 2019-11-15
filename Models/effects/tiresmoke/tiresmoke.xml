@@ -3,23 +3,11 @@
 <PropertyList>
 
   <particlesystem>
-    <name>TRAIL-RH</name>
-    <texture>trail.png</texture>
+    <name>tiresmoke-right</name>
+    <texture>tiresmoke.png</texture>
 
     <emissive>false</emissive>
     <lighting>false</lighting>
-
-   <condition>
-     <and>
-       <greater-than>
-       <property>controls/flight/spoilers</property>
-       <value>0</value>
-       </greater-than>
-       <not>
-       <property>consumables/fuel/tank[3]/empty</property>
-       </not>
-     </and>
-   </condition>
 
     <attach>world</attach>
 
@@ -28,19 +16,19 @@
     </placer>
 
     <shooter>
-      <theta-min-deg>80</theta-min-deg>
-      <theta-max-deg>85</theta-max-deg>
+      <theta-min-deg>130</theta-min-deg>
+      <theta-max-deg>135</theta-max-deg>
       <phi-min-deg>-1.5</phi-min-deg>
       <phi-max-deg>1.5</phi-max-deg>
       <speed-mps>
-        <property>engines/engine/n1</property>
-        <factor>5</factor>
+        <property>velocities/airspeed-kt</property>
+        <factor>0.2</factor>
       </speed-mps>
       <rotation-speed>
-        <x-min-deg-sec>10</x-min-deg-sec>
+        <x-min-deg-sec>0</x-min-deg-sec>
         <y-min-deg-sec>0</y-min-deg-sec>
         <z-min-deg-sec>0</z-min-deg-sec>
-        <x-max-deg-sec>30</x-max-deg-sec>
+        <x-max-deg-sec>0</x-max-deg-sec>
         <y-max-deg-sec>0</y-max-deg-sec>
         <z-max-deg-sec>0</z-max-deg-sec>
       </rotation-speed>
@@ -48,7 +36,8 @@
 
     <counter>
       <particles-per-sec>
-        <value>50</value>
+        <property>velocities/airspeed-kt</property>
+        <factor>1</factor>
       </particles-per-sec>
     </counter>
 
@@ -57,30 +46,30 @@
     <particle>
       <start>
         <color>
-          <red><value>   1 </value></red>
-          <green><value> 1 </value></green>
-          <blue><value>  1</value></blue>
-          <alpha><value> 0.5 </value></alpha>
+          <red><value>   0.85 </value></red>
+          <green><value> 0.85 </value></green>
+          <blue><value>  1 </value></blue>
+          <alpha><value> 0.1 </value></alpha>
         </color>
         <size>
-          <value>3</value>
+          <value>0.5</value>
         </size>
       </start>
 
       <end>
         <color>
-          <red><value>   0.90 </value></red>
-          <green><value> 0.90 </value></green>
-          <blue><value>  0.90 </value></blue>
+          <red><value>   0.75 </value></red>
+          <green><value> 0.75 </value></green>
+          <blue><value>  0.9 </value></blue>
           <alpha><value> 0.0001 </value></alpha>
         </color>
         <size>
-          <value>50</value>
+          <value>2</value>
         </size>
       </end>
 
       <life-sec>
-        <value>60</value>
+        <value>1</value>
       </life-sec>
 
       <mass-kg>10</mass-kg>
@@ -94,5 +83,6 @@
     </program>
 
   </particlesystem>
+
 
 </PropertyList>

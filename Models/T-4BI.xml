@@ -1366,7 +1366,7 @@
 
 <!-- effect -->
    <model>
-    <path>Aircraft/T-4ADTW/Models/effects/splash/right-splash.xml</path>
+    <path>Aircraft/T-4BI/Models/effects/splash/right-splash.xml</path>
     <offsets>
       <x-m> 0.854 </x-m>
       <y-m>  1.523 </y-m>
@@ -1375,7 +1375,7 @@
   </model>
 
    <model>
-    <path>Aircraft/T-4ADTW/Models/effects/splash/left-splash.xml</path>
+    <path>Aircraft/T-4BI/Models/effects/splash/left-splash.xml</path>
     <offsets>
       <x-m> 0.854 </x-m>
       <y-m> -1.523 </y-m>
@@ -1384,13 +1384,55 @@
   </model>
 
    <model>
-    <path>Aircraft/T-4ADTW/Models/effects/splash/front-splash.xml</path>
+    <path>Aircraft/T-4BI/Models/effects/splash/front-splash.xml</path>
     <offsets>
       <x-m>  -4.220 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -1.352 </z-m>
     </offsets>
   </model>
+
+   <model>
+    <name>TireSmokeRight</name>
+    <path>Aircraft/T-4BI/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m> 0.854 </x-m>
+      <y-m>  1.523 </y-m>
+      <z-m> -1.134 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeRight</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[0]/compression-m</property>
+	  <value>0.05</value>
+	</greater-than>
+      </condition>
+  </animation>
+
+   <model>
+    <name>TireSmokeLeft</name>
+    <path>Aircraft/T-4BI/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m> 0.854 </x-m>
+      <y-m> -1.523 </y-m>
+      <z-m> -1.134 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeLeft</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[1]/compression-m</property>
+	  <value>0.05</value>
+	</greater-than>
+      </condition>
+  </animation>
 
 </PropertyList>
 
