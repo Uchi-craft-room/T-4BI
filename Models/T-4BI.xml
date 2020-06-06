@@ -1118,10 +1118,28 @@
   </model>
 
   <model>
+    <path>Aircraft/T-4BI/Models/effects/lights/procedural_light_nav_left.xml</path>
+    <offsets>
+      <x-m> 2.12 </x-m>
+      <y-m> -5.00 </y-m>
+      <z-m>  -0.05</z-m>
+    </offsets>
+  </model>
+
+  <model>
     <path>Aircraft/T-4BI/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> 2.12 </x-m>
       <y-m>  4.96 </y-m>
+      <z-m>  -0.05 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/T-4BI/Models/effects/lights/procedural_light_nav_right.xml</path>
+    <offsets>
+      <x-m> 2.12 </x-m>
+      <y-m>  5.00 </y-m>
       <z-m>  -0.05 </z-m>
     </offsets>
   </model>
@@ -1145,6 +1163,18 @@
       <z-m> 0.48 </z-m>
     </offsets>
   </model> 
+
+  <model>
+  <name>Tail-Light-prc</name>
+    <path>Aircraft/T-4BI/Models/effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> 6.25 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> 0.48 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model> 
+
  <model>
   <name>Top-Light</name>
     <path>Aircraft/T-4BI/Models/light/TailLight.xml</path>
@@ -1178,6 +1208,7 @@
   <animation>
     <type>select</type>
     <object-name>Tail-Light</object-name>
+    <object-name>Tail-Light-prc</object-name>
     <object-name>Top-Light</object-name>
     <object-name>Lwr-Light</object-name>
     <object-name>Top-Light</object-name>
@@ -1249,6 +1280,16 @@
   </model>
 
   <model>
+    <name>LandingLight-Left-prc</name>
+    <path>Aircraft/T-4BI/Models/effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> 0.8 </x-m>
+      <y-m> -1.2 </y-m>
+      <z-m> -0.4 </z-m>
+    </offsets>
+  </model>
+
+  <model>
     <name>LandingLight-Right</name>
     <path>Aircraft/T-4BI/Models/light/Landinglight.xml</path>
     <offsets>
@@ -1260,10 +1301,22 @@
     </offsets>
   </model>
 
+  <model>
+    <name>LandingLight-Right-prc</name>
+    <path>Aircraft/T-4BI/Models/effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> 0.8 </x-m>
+      <y-m>  1.2 </y-m>
+      <z-m> -0.4 </z-m>
+    </offsets>
+  </model>
+
   <animation>
     <name>WingLight</name>
     <object-name>LandingLight-Left</object-name>
     <object-name>LandingLight-Right</object-name>
+    <object-name>LandingLight-Left-prc</object-name>
+    <object-name>LandingLight-Right-prc</object-name>
   </animation>
 
   <animation>
@@ -1299,8 +1352,8 @@
      <z-m> 0 </z-m>
     </center>
     <axis> 
-      <x> 0 </x> 
-      <y>  -1 </y> 
+      <x>  0 </x> 
+      <y> -1 </y> 
       <z>  0 </z> 
     </axis> 
   </animation>

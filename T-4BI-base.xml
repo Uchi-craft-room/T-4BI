@@ -6,10 +6,6 @@
 
     <fuel-fraction>1.0</fuel-fraction>
 
-    <startup>
-      <splash-texture>Aircraft/T-4BI/T-4BI-splash.png</splash-texture>
-    </startup>
-
     <sound>
       <path archive="y">Aircraft/T-4BI/Sounds/T-4BI-sound.xml</path>
     </sound>
@@ -130,6 +126,7 @@
     <T-4BI>
       <file>Aircraft/T-4BI/Nasal/electrical.nas</file>
       <file>Aircraft/T-4BI/Nasal/light.nas</file>
+      <file>Aircraft/T-4BI/Nasal/light-manager.nas</file>
       <file>Aircraft/T-4BI/Nasal/liveries.nas</file>
       <file>Aircraft/T-4BI/Nasal/immat.nas</file>
       <file>Aircraft/T-4BI/Nasal/instruments.nas</file>
